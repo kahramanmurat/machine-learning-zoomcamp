@@ -3,8 +3,8 @@
 
 import requests
 
-
-url = 'http://localhost:9696/predict'
+host="churn-serving-app1-env.eba-rpwvyeu3.us-east-1.elasticbeanstalk.com"
+url = f"http://{host}/predict"
 
 customer_id = 'xyz-123'
 customer = {
@@ -24,9 +24,9 @@ customer = {
     "contract": "month-to-month",
     "paperlessbilling": "yes",
     "paymentmethod": "electronic_check",
-    "tenure": 24,
+    "tenure": 32,
     "monthlycharges": 29.85,
-    "totalcharges": (24 * 29.85)
+    "totalcharges": (32 * 29.85)
 }
 
 
